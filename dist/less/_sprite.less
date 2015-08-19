@@ -1,0 +1,42 @@
+@chevrolet_red: -4px, -4px, 312px, 151px;
+@porsche_black: -4px, -163px, 333px, 153px;
+@audi_white: -4px, -324px, 344px, 160px;
+@porsche_red: -4px, -492px, 334px, 163px;
+@audi_red: -4px, -663px, 346px, 164px;
+@chevrolet_yellow: -4px, -835px, 337px, 169px;
+@audi_black: -4px, -1012px, 340px, 170px;
+@porsche_silvery: -4px, -1190px, 332px, 173px;
+@ford_silvery: -4px, -1371px, 339px, 189px;
+@ford_orange: -4px, -1568px, 330px, 193px;
+@ford_white: -4px, -1769px, 358px, 196px;
+@bwm_red: -4px, -1973px, 301px, 236px;
+@bwm_white: -4px, -2217px, 306px, 237px;
+@bwm_gold: -4px, -2462px, 314px, 246px;
+
+.sprite-width(@sprite) {
+  width: extract(@sprite, 3);
+}
+
+.sprite-height(@sprite) {
+  height: extract(@sprite, 4);
+}
+
+.sprite-position(@sprite) {
+  @sprite-offset-x: extract(@sprite, 1);
+  @sprite-offset-y: extract(@sprite, 2);
+  background-position: @sprite-offset-x  @sprite-offset-y;
+}
+
+.sprite(@sprite) {
+  .sprite-position(@sprite);
+  background-repeat: no-repeat;
+  overflow: hidden;
+  display: block;
+  .sprite-width(@sprite);
+  .sprite-height(@sprite);
+}
+
+.icon {
+  background-image: url('sprite.png');
+}
+

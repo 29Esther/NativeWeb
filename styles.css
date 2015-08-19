@@ -1,0 +1,19 @@
+.icon {
+  background-image: url('./dist/less/sprite.png');
+}
+.chevrolet_red {
+  background-position: -4px -4px;
+  background-repeat: no-repeat;
+  overflow: hidden;
+  display: block;
+  width: 312px;
+  height: 151px;
+}
+.porsche_black {
+  background-position: -4px -163px;
+  background-repeat: no-repeat;
+  overflow: hidden;
+  display: block;
+  width: 333px;
+  height: 153px;
+}
